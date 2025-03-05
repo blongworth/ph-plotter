@@ -45,8 +45,8 @@ def read_csv_data(file_path):
             
         # Identify pH columns - specifically looking for pH_total and pH_free
         ph_cols = []
-        if 'pH_free' in df.columns:
-            ph_cols.append('pH_free')
+        if 'ph_free' in df.columns:
+            ph_cols.append('ph_free')
         if 'ph_total' in df.columns:
             ph_cols.append('ph_total')
             
@@ -140,11 +140,11 @@ def update_dropdown(n, current_value):
             
             # Set default value if not already set
             if current_value is None or current_value not in ph_cols:
-                # Prefer pH_total if available
-                if 'ph_total' in ph_cols:
+                # Prefer ph_free if available
+                if 'ph_free' in ph_cols:
+                    new_value = 'ph_free'
+                elif 'ph_total' in ph_cols:
                     new_value = 'ph_total'
-                elif 'pH_free' in ph_cols:
-                    new_value = 'pH_free'
                 else:
                     new_value = ph_cols[0]
             else:
