@@ -1,7 +1,7 @@
 [project]
 name = "ph-plotter"
 version = "0.1.0"
-description = "Add your description here"
+description = "Interactive plot of mFET pH data with dash/plotly"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
